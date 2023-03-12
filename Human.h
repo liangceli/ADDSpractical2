@@ -12,7 +12,7 @@
 #include "Ninja.h"
 #include "Robot.h"
 #include "Zombie.h"
-using namespace std;
+
 
 class Human: public Player{
     private:
@@ -20,9 +20,8 @@ class Human: public Player{
     string h_move;
 
     public:
-    Human(string name);
+    Human(std::string name);
     Move* makeMove();
     string getName();
-    string get_Move();
 
 };
