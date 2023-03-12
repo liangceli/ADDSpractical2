@@ -18,6 +18,7 @@ Referee::Referee(){}
 
 Player* Referee::refGame(Player *player1, Player *player2) {
     //string M1=player1->makeMove()->getName();
+    //cout<<M1;
     string M2=player2->makeMove()->getName();//第二个玩家的招式名
     //cout<<M2;//通过
 
@@ -31,7 +32,7 @@ Player* Referee::refGame(Player *player1, Player *player2) {
     if (n1==1) {
         return player1;
     }
-    if (n1==0) {
+    if (n1==-1) {
         return player2;
     }
     
