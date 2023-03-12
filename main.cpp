@@ -8,6 +8,11 @@
 #include"Scissors.h"
 #include"Rock.h"
 #include"Referee.h"
+#include"Zombie.h"
+#include"Pirate.h"
+#include"Monkey.h"
+#include"Robot.h"
+#include"Ninja.h"
 using namespace std;
 
 int main(){
@@ -16,6 +21,10 @@ int main(){
     Scissors s;
     Paper p;
     Robot robot;
+    Ninja ninja;
+    Zombie zombie;
+    Monkey monkey;
+    Pirate pirate;
     Computer* com=new Computer;
     Human* hum=new Human("John");
     Referee ruler;

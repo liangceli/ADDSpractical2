@@ -35,5 +35,9 @@ Player* Referee::refGame(Player *player1, Player *player2) {
     if (n1==-1) {
         return player2;
     }
+
+    if(n1==0){
+        
+    }
     
 }
