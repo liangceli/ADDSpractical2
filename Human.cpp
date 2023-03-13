@@ -5,7 +5,7 @@
 using namespace std;
 
 Human :: Human(){
-    h_name="human";
+    h_name="Human";
 }
 
 Human :: Human(string p_n){
