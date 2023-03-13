@@ -18,7 +18,7 @@ string Human :: getName(){
 
 Move* Human :: makeMove(){
 
-    cout<<"Enter Move:";
+    //cout<<"Enter Move:";
     string input;
     cin >> input;
 
