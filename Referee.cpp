@@ -1,43 +1,31 @@
-#include <iostream>
-#include <string>
-#include "Referee.h"
-#include "Move.h"
-#include "Rock.h"
-#include "Paper.h"
-#include "Scissors.h"
-#include "Monkey.h"
-#include "Pirate.h"
-#include "Ninja.h"
-#include "Robot.h"
-#include "Zombie.h"
-#include "Human.h"
-#include "Computer.h"
-using namespace std;
+#include<iostream>
+#include<string>
+#include"Move.h"
+#include"Referee.h"
+#include"Player.h"
 
-Referee::Referee(){}
-
-Player* Referee::refGame(Player *player1, Player *player2) {
-    //string M1=player1->makeMove()->getName();
-    //cout<<M1;
-    string M2=player2->makeMove()->getName();//第二个玩家的招式名
-    //cout<<M2;//通过
-
-    int n1;
-    n1=player1->makeMove()->winLose(M2);//将第二个玩家招式名称和第一个玩家进行比较
-    //cout<<n1;//通过
-
-    if (n1==2) {
-        return nullptr;
-    }
-    if (n1==1) {
-        return player1;
-    }
-    if (n1==-1) {
-        return player2;
-    }
-
-    if(n1==0){
+ Player* Referee :: refGame(Player*player1, Player*player2){  
         
-    }
-    
-}
+        Move* the_move = new Move();
+        Move* p1m = player1->makeMove();
+        Move* p2m = player2->makeMove();
+        
+        int res = the_move->Judge(p1m, p2m);
+
+        if(res==2){
+          return nullptr;  
+        }
+        
+        if(res==1){
+            return player1;
+        }
+        
+        if(res==-1){
+            return player2;
+        }
+        if(res==0){
+           return nullptr; 
+        }
+
+        delete the_move;
+     }

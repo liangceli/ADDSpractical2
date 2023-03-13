@@ -1,27 +1,15 @@
 #pragma once
 #include<iostream>
 #include<string>
-#include"Move.h"
 #include"Player.h"
-#include"Computer.h"
-#include"Paper.h"
-#include"Scissors.h"
-#include"Rock.h"
-#include "Monkey.h"
-#include "Pirate.h"
-#include "Ninja.h"
-#include "Robot.h"
-#include "Zombie.h"
-
 
 class Human: public Player{
     private:
-    string h_name;
-    string h_move;
+    std :: string h_name;
 
     public:
-    Human(std::string name);
+    Human();
+    Human(std::string p_n);
+    std :: string getName();
     Move* makeMove();
-    string getName();
-
 };
