@@ -11,4 +11,4 @@ class Move{
     std :: string getName();
     void setMoveName(std :: string n);
     int Judge(Move* p1, Move* p2);
-}
+};
